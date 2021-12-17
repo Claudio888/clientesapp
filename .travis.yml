@@ -4,7 +4,7 @@ services:
 - docker
 env:
   global:
-  - ECR_REPO="clientesapp"
+  - ECR_REPO=clientesapp
   - AWS_REGION="us-east-1"
   - secure: travisEncryptedAWS_ACCOUNT_ID
   - secure: travisEncryptedAWS_ACCESS_KEY_ID

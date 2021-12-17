@@ -12,6 +12,7 @@ env:
 before_install:
 - pip install awscli
 - export PATH=$PATH:$HOME/.local/bin
+- aws ecr get-login-password | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/python:3.8.0-alpine
 script:
 - docker build -t $ECR_REPO .
 deploy:

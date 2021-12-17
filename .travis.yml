@@ -20,6 +20,9 @@ script:
 deploy:
   provider: script
   script: bash deploy-ecr.sh
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(qa|main)$
 branches:
   only:
     - main

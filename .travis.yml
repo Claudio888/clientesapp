@@ -19,5 +19,5 @@ deploy:
   script: bash deploy-ecr.sh
 branches:
   only:
-    - master
+    - main
     - qa
